@@ -11,12 +11,12 @@ import java.awt.Color;
  *
  * @author Lenovo
  */
-public class TrainingGUI extends javax.swing.JFrame {
+public class SettingGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form StartGUI
      */
-    public TrainingGUI() {
+    public SettingGUI() {
         initComponents();
         
         jPanel1.setBackground(new Color(0,0,0,170));
@@ -86,7 +86,11 @@ public class TrainingGUI extends javax.swing.JFrame {
         Training_Melanoma.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\MindMap_32px.png")); // NOI18N
         Training_Melanoma.setToolTipText("Training of Melanoma");
         Training_Melanoma.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Training_Melanoma.setOpaque(true);
+        Training_Melanoma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Training_MelanomaMouseClicked(evt);
+            }
+        });
 
         Melanoma_Trial.setBackground(new java.awt.Color(209, 255, 0));
         Melanoma_Trial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -103,11 +107,7 @@ public class TrainingGUI extends javax.swing.JFrame {
         Setting.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Setting.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\Settings_32px.png")); // NOI18N
         Setting.setToolTipText("Setting");
-        Setting.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SettingMouseClicked(evt);
-            }
-        });
+        Setting.setOpaque(true);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -151,19 +151,19 @@ public class TrainingGUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void Training_MelanomaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Training_MelanomaMouseClicked
+        // TODO add your handling code here:
+        TrainingGUI t = new TrainingGUI();
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Training_MelanomaMouseClicked
+
     private void Melanoma_TrialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Melanoma_TrialMouseClicked
         // TODO add your handling code here:
         MelanomatrialGUI t = new MelanomatrialGUI();
         t.setVisible(true);
         dispose();
     }//GEN-LAST:event_Melanoma_TrialMouseClicked
-
-    private void SettingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SettingMouseClicked
-        // TODO add your handling code here:
-        SettingGUI t = new SettingGUI();
-        t.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_SettingMouseClicked
 
     /**
      * @param args the command line arguments
@@ -182,14 +182,20 @@ public class TrainingGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TrainingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SettingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TrainingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SettingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TrainingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SettingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TrainingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SettingGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -202,7 +208,7 @@ public class TrainingGUI extends javax.swing.JFrame {
                     
                 }
                 
-                new TrainingGUI().setVisible(true);
+                new SettingGUI().setVisible(true);
             }
         });
     }

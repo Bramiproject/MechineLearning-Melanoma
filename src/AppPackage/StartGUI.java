@@ -39,9 +39,9 @@ public class StartGUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        Training_Melanoma = new javax.swing.JLabel();
+        Melanoma_Trial = new javax.swing.JLabel();
+        Setting = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,16 +55,6 @@ public class StartGUI extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(198, 233, 41));
-        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jPanel2MouseDragged(evt);
-            }
-        });
-        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel2MouseClicked(evt);
-            }
-        });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
@@ -91,14 +81,29 @@ public class StartGUI extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\Menu_32px.png")); // NOI18N
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\MindMap_32px.png")); // NOI18N
-        jLabel7.setToolTipText("Training of Melanoma");
+        Training_Melanoma.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\MindMap_32px.png")); // NOI18N
+        Training_Melanoma.setToolTipText("Training of Melanoma");
+        Training_Melanoma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Training_MelanomaMouseClicked(evt);
+            }
+        });
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\SearchProperty_32px.png")); // NOI18N
-        jLabel8.setToolTipText("Melanoma Trial");
+        Melanoma_Trial.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\SearchProperty_32px.png")); // NOI18N
+        Melanoma_Trial.setToolTipText("Melanoma Trial");
+        Melanoma_Trial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Melanoma_TrialMouseClicked(evt);
+            }
+        });
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\Settings_32px.png")); // NOI18N
-        jLabel13.setToolTipText("Setting");
+        Setting.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\MechineLearning-Melanoma\\src\\MediaPackage\\Settings_32px.png")); // NOI18N
+        Setting.setToolTipText("Setting");
+        Setting.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SettingMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -108,9 +113,9 @@ public class StartGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel13))
+                    .addComponent(Training_Melanoma)
+                    .addComponent(Melanoma_Trial)
+                    .addComponent(Setting))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -119,11 +124,11 @@ public class StartGUI extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(jLabel6)
                 .addGap(82, 82, 82)
-                .addComponent(jLabel7)
+                .addComponent(Training_Melanoma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addComponent(jLabel8)
+                .addComponent(Melanoma_Trial)
                 .addGap(91, 91, 91)
-                .addComponent(jLabel13)
+                .addComponent(Setting)
                 .addGap(138, 138, 138))
         );
 
@@ -138,19 +143,31 @@ public class StartGUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jPanel2MouseDragged
-
-    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel2MouseClicked
-
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void Training_MelanomaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Training_MelanomaMouseClicked
+        // TODO add your handling code here:
+        TrainingGUI t = new TrainingGUI();
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Training_MelanomaMouseClicked
+
+    private void Melanoma_TrialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Melanoma_TrialMouseClicked
+        // TODO add your handling code here:
+        MelanomatrialGUI t = new MelanomatrialGUI();
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Melanoma_TrialMouseClicked
+
+    private void SettingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SettingMouseClicked
+        // TODO add your handling code here:
+        SettingGUI t = new SettingGUI();
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_SettingMouseClicked
 
     /**
      * @param args the command line arguments
@@ -195,13 +212,13 @@ public class StartGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Melanoma_Trial;
+    private javax.swing.JLabel Setting;
+    private javax.swing.JLabel Training_Melanoma;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
